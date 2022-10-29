@@ -15,16 +15,13 @@
      limitations under the License.
 -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:key="pref_sync_account_key">
-    </PreferenceCategory>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="pref_sync_account_key" />
 
     <PreferenceCategory>
         <CheckBoxPreference
+            android:defaultValue="false"
             android:key="pref_key_bg_random_appear"
-            android:title="@string/preferences_bg_random_appear_title"
-            android:defaultValue="false" />
+            android:title="@string/preferences_bg_random_appear_title" />
     </PreferenceCategory>
 </PreferenceScreen>

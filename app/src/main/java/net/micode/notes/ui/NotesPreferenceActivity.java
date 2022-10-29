@@ -28,10 +28,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
+import android.preference.SwitchPreference;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
@@ -61,6 +63,10 @@ public class NotesPreferenceActivity extends PreferenceActivity {
 
     private static final String AUTHORITIES_FILTER_KEY = "authorities";
 
+    public static final String BUTTON_KEY = "newnote_button";
+
+    public String buttonmode = "button";
+
     private PreferenceCategory mAccountCategory;
 
     private GTaskReceiver mReceiver;
@@ -86,7 +92,8 @@ public class NotesPreferenceActivity extends PreferenceActivity {
         mOriAccounts = null;
         View header = LayoutInflater.from(this).inflate(R.layout.settings_header, null);
         getListView().addHeaderView(header, null, true);
-    }
+
+        };
 
     @Override
     protected void onResume() {

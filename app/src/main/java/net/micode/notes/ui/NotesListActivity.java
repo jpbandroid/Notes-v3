@@ -59,6 +59,14 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+import net.micode.notes.ui.NotesPreferenceActivity;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import net.micode.notes.R;
 import net.micode.notes.data.Notes;
@@ -78,7 +86,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 
-public class NotesListActivity extends Activity implements OnClickListener, OnItemLongClickListener {
+public class NotesListActivity extends AppCompatActivity implements OnClickListener, OnItemLongClickListener {
     private static final int FOLDER_NOTE_LIST_QUERY_TOKEN = 0;
 
     private static final int FOLDER_LIST_QUERY_TOKEN      = 1;
@@ -103,7 +111,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
     private ListView mNotesListView;
 
-    private Button mAddNewNote;
+    private FloatingActionButton mAddNewNote;
 
     private boolean mDispatch;
 
@@ -145,7 +153,13 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
          * Insert an introduction when user firstly use this application
          */
         setAppInfoFromRawRes();
+
     }
+
+
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -220,7 +234,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         mNotesListView.setOnItemLongClickListener(this);
         mNotesListAdapter = new NotesListAdapter(this);
         mNotesListView.setAdapter(mNotesListAdapter);
-        mAddNewNote = (Button) findViewById(R.id.btn_new_note);
+        mAddNewNote = (FloatingActionButton) findViewById(R.id.btn_new_note);
         mAddNewNote.setOnClickListener(this);
         mAddNewNote.setOnTouchListener(new NewNoteOnTouchListener());
         mDispatch = false;
@@ -555,6 +569,10 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             mTitleBar.setText(data.getSnippet());
         }
         mTitleBar.setVisibility(View.VISIBLE);
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     public void onClick(View v) {
@@ -672,14 +690,27 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 mState = ListEditState.NOTE_LIST;
                 startAsyncNotesListQuery();
                 mTitleBar.setVisibility(View.GONE);
+            {
+                androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
+                assert actionBar != null;
+                actionBar.setHomeButtonEnabled(false);
+                actionBar.setDisplayHomeAsUpEnabled(false);
+            }
                 break;
             case CALL_RECORD_FOLDER:
                 mCurrentFolderId = Notes.ID_ROOT_FOLDER;
                 mState = ListEditState.NOTE_LIST;
                 mAddNewNote.setVisibility(View.VISIBLE);
                 mTitleBar.setVisibility(View.GONE);
+            {
+                ActionBar actionBar = getSupportActionBar();
+                assert actionBar != null;
+                actionBar.setHomeButtonEnabled(false);
+                actionBar.setDisplayHomeAsUpEnabled(false);
+            }
                 startAsyncNotesListQuery();
                 break;
+
             case NOTE_LIST:
                 super.onBackPressed();
                 break;
@@ -811,6 +842,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             }
             case R.id.menu_search:
                 onSearchRequested();
+                break;
+            case android.R.id.home:
+                onBackPressed();
                 break;
             default:
                 break;

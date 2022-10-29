@@ -33,6 +33,8 @@ import android.provider.Settings;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import net.micode.notes.R;
 import net.micode.notes.data.Notes;
 import net.micode.notes.tool.DataUtils;
@@ -40,7 +42,7 @@ import net.micode.notes.tool.DataUtils;
 import java.io.IOException;
 
 
-public class AlarmAlertActivity extends Activity implements OnClickListener, OnDismissListener {
+public class AlarmAlertActivity extends AppCompatActivity implements OnClickListener, OnDismissListener {
     private long mNoteId;
     private String mSnippet;
     private static final int SNIPPET_PREW_MAX_LEN = 60;
