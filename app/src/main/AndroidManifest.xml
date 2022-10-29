@@ -16,11 +16,10 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="net.micode.notes"
     android:versionCode="1"
-    android:versionName="0.1" >
-
-    <uses-sdk android:minSdkVersion="14" />
+    android:versionName="0.1">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
@@ -42,7 +41,8 @@
             android:launchMode="singleTop"
             android:theme="@style/NoteTheme"
             android:uiOptions="splitActionBarWhenNarrow"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,9 +54,11 @@
             android:name=".ui.NoteEditActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
-            android:theme="@style/NoteTheme" >
+            android:theme="@style/NoteTheme"
+            android:exported="true">
 
-            <intent-filter>
+            <intent-filter android:scheme="http"
+                tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="vnd.android.cursor.item/text_note" />
@@ -83,11 +85,13 @@
         <provider
             android:name="net.micode.notes.data.NotesProvider"
             android:authorities="micode_notes"
-            android:multiprocess="true" />
+            android:multiprocess="true"
+            android:exported="false" />
 
         <receiver
             android:name=".widget.NoteWidgetProvider_2x"
-            android:label="@string/app_widget2x2" >
+            android:label="@string/app_widget2x2"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
@@ -100,7 +104,8 @@
         </receiver>
         <receiver
             android:name=".widget.NoteWidgetProvider_4x"
-            android:label="@string/app_widget4x4" >
+            android:label="@string/app_widget4x4"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -113,7 +118,8 @@
                 android:resource="@xml/widget_4x_info" />
         </receiver>
 
-        <receiver android:name=".ui.AlarmInitReceiver" >
+        <receiver android:name=".ui.AlarmInitReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
