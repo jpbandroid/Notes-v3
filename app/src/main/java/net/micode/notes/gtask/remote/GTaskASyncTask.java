@@ -58,9 +58,7 @@ public class GTaskASyncTask extends AsyncTask<Void, String, Integer> {
     }
 
     public void publishProgess(String message) {
-        publishProgress(new String[] {
-            message
-        });
+        publishProgress(message);
     }
 
     private void showNotification(int tickerId, String content) {
@@ -77,8 +75,6 @@ public class GTaskASyncTask extends AsyncTask<Void, String, Integer> {
             pendingIntent = PendingIntent.getActivity(mContext, 0, new Intent(mContext,
                     NotesListActivity.class), 0);
         }
-        notification.setLatestEventInfo(mContext, mContext.getString(R.string.app_name), content,
-                pendingIntent);
         mNotifiManager.notify(GTASK_SYNC_NOTIFICATION_ID, notification);
     }
 
