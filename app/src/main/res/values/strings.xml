@@ -22,7 +22,7 @@
     <string name="app_widget4x4">Notes 4x4</string>
     <string name="widget_havenot_content">No associated note found, click to create associated note.</string>
     <string name="widget_under_visit_mode">Privacy mode，can not see note content</string>
-    <string name="notelist_string_info">...</string>
+    <string name="notelist_string_info">…</string>
     <string name="notelist_menu_new">Add note</string>
     <string name="delete_remind_time_message">Delete reminder successfully</string>
     <string name="set_remind_time_message">Set reminder</string>
@@ -36,10 +36,10 @@
     <string name="note_link_web">Browse web</string>
     <string name="note_link_other">Open map</string>
     <!-- Text export file information -->
-    <string name="file_path">/MIUI/notes/</string>
-    <string name="file_name_txt_format">notes_%s.txt</string>
+    <string name="file_path" translatable="false">/MIUI/notes/</string>
+    <string name="file_name_txt_format" translatable="false">notes_%s.txt</string>
     <!-- notes list string -->
-    <string name="format_folder_files_count">(%d)</string>
+    <string name="format_folder_files_count" translatable="false">(%d)</string>
     <string name="menu_create_folder">New Folder</string>
     <string name="menu_export_text">Export text</string>
     <string name="menu_sync">Sync</string>
@@ -85,7 +85,7 @@
     <string name="failed_sdcard_export">Export fail</string>
     <string name="format_exported_file_location">Export text file (%1$s) to SD (%2$s) directory</string>
     <!-- Sync -->
-    <string name="ticker_syncing">Syncing notes...</string>
+    <string name="ticker_syncing">Syncing notes…</string>
     <string name="ticker_success">Sync is successful</string>
     <string name="ticker_fail">Sync is failed</string>
     <string name="ticker_cancel">Sync is canceled</string>
@@ -93,15 +93,15 @@
     <string name="error_sync_network">Sync failed, please check network and account settings</string>
     <string name="error_sync_internal">Sync failed, internal error occurs</string>
     <string name="error_sync_cancelled">Sync is canceled</string>
-    <string name="sync_progress_login">Logging into %1$s...</string>
-    <string name="sync_progress_init_list">Getting remote note list...</string>
-    <string name="sync_progress_syncing">Synchronize local notes with Google Task...</string>
+    <string name="sync_progress_login">Logging into %1$s…</string>
+    <string name="sync_progress_init_list">Getting remote note list…</string>
+    <string name="sync_progress_syncing">Synchronize local notes with Google Task…</string>
     <!-- Preferences -->
     <string name="preferences_title">Settings</string>
     <string name="preferences_account_title">Sync account</string>
     <string name="preferences_account_summary">Sync notes with google task</string>
     <string name="preferences_last_sync_time">Last sync time %1$s</string>
-    <string name="preferences_last_sync_time_format">yyyy-MM-dd hh:mm:ss</string>
+    <string name="preferences_last_sync_time_format" translatable="false">yyyy-MM-dd hh:mm:ss</string>
     <string name="preferences_add_account">Add account</string>
     <string name="preferences_menu_change_account">Change sync account</string>
     <string name="preferences_menu_remove_account">Remove sync account</string>

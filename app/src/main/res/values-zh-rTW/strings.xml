@@ -22,7 +22,7 @@
     <string name="app_widget4x4">便簽4x4</string>
     <string name="widget_havenot_content">沒有關聯內容，點擊新建便簽。</string>
     <string name="widget_under_visit_mode">訪客模式下，便籤內容不可見</string>
-    <string name="notelist_string_info">...</string>
+    <string name="notelist_string_info">…</string>
     <string name="notelist_menu_new">新建便簽</string>
     <string name="delete_remind_time_message">成功刪除提醒</string>
     <string name="set_remind_time_message">創建提醒</string>
@@ -80,7 +80,7 @@
     <string name="failed_sdcard_export">導出失敗</string>
     <string name="format_exported_file_location">已將文本文件(%1$s)導出至SD(%2$s)目錄</string>
     <!-- Sync -->
-    <string name="ticker_syncing">同步便簽...</string>
+    <string name="ticker_syncing">同步便簽…</string>
     <string name="ticker_success">同步成功</string>
     <string name="ticker_fail">同步失敗</string>
     <string name="ticker_cancel">同步已取消</string>
@@ -88,9 +88,9 @@
     <string name="error_sync_network">同步失敗，請檢查網絡和帳號設置</string>
     <string name="error_sync_internal">同步失敗，發生內部錯誤</string>
     <string name="error_sync_cancelled">同步已取消</string>
-    <string name="sync_progress_login">登陸%1$s...</string>
-    <string name="sync_progress_init_list">正在獲取服務器便籤列表...</string>
-    <string name="sync_progress_syncing">正在同步本地便籤...</string>
+    <string name="sync_progress_login">登陸%1$s…</string>
+    <string name="sync_progress_init_list">正在獲取服務器便籤列表…</string>
+    <string name="sync_progress_syncing">正在同步本地便籤…</string>
     <!-- Preferences -->
     <string name="preferences_title">設置</string>
     <string name="preferences_account_title">同步賬號</string>
