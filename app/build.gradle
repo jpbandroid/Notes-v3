@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdk 33
 
     defaultConfig {
         applicationId "net.micode.notes"
-        minSdkVersion 14
-        targetSdkVersion 22
+        minSdk 14
+        targetSdk 33
     }
 
     buildTypes {
