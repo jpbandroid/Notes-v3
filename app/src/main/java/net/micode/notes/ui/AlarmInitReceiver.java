@@ -53,7 +53,7 @@ public class AlarmInitReceiver extends BroadcastReceiver {
                     long alertDate = c.getLong(COLUMN_ALERTED_DATE);
                     Intent sender = new Intent(context, AlarmReceiver.class);
                     sender.setData(ContentUris.withAppendedId(Notes.CONTENT_NOTE_URI, c.getLong(COLUMN_ID)));
-                    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, sender, 0);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, sender, PendingIntent.FLAG_IMMUTABLE);
                     AlarmManager alermManager = (AlarmManager) context
                             .getSystemService(Context.ALARM_SERVICE);
                     alermManager.set(AlarmManager.RTC_WAKEUP, alertDate, pendingIntent);
