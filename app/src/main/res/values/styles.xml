@@ -62,7 +62,7 @@
         <item name="android:actionBarStyle">@style/NoteActionBarStyle</item>
     </style>
 
-    <style name="NoteActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+    <style name="NoteActionBarStyle" parent="@android:style/Widget.Material.Light.ActionBar">
         <item name="android:displayOptions">showHome|useLogo</item>
     </style>
 </resources>

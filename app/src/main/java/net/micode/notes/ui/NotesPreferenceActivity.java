@@ -27,6 +27,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.Preference;
@@ -48,6 +49,8 @@ import net.micode.notes.R;
 import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.NoteColumns;
 import net.micode.notes.gtask.remote.GTaskSyncService;
+
+import java.util.Objects;
 
 
 public class NotesPreferenceActivity extends PreferenceActivity {
@@ -80,14 +83,18 @@ public class NotesPreferenceActivity extends PreferenceActivity {
         super.onCreate(icicle);
 
         /* using the app icon for navigation */
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getActionBar()).setDisplayHomeAsUpEnabled(true);
 
         addPreferencesFromResource(R.xml.preferences);
         mAccountCategory = (PreferenceCategory) findPreference(PREFERENCE_SYNC_ACCOUNT_KEY);
         mReceiver = new GTaskReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction(GTaskSyncService.GTASK_SERVICE_BROADCAST_NAME);
-        registerReceiver(mReceiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(mReceiver, filter, RECEIVER_EXPORTED);
+        } else {
+            registerReceiver(mReceiver, filter);
+        }
 
         mOriAccounts = null;
         View header = LayoutInflater.from(this).inflate(R.layout.settings_header, null);
