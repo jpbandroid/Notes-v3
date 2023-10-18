@@ -124,8 +124,8 @@
     <string name="search_hint">Search notes</string>
     <string name="search_setting_description">Text in your notes</string>
     <string name="search">Notes</string>
-    <string name="datetime_dialog_ok">set</string>
-    <string name="datetime_dialog_cancel">cancel</string>
+    <string name="datetime_dialog_ok">Set</string>
+    <string name="datetime_dialog_cancel">Cancel</string>
     <plurals name="search_results_title">
          <item quantity="one"><xliff:g id="number" example="1">%1$s</xliff:g> result for \"<xliff:g id="search" example="???">%2$s</xliff:g>\"</item>
         <!-- Case of 0 or 2 or more results. -->
