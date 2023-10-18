@@ -24,7 +24,7 @@
     <string name="widget_under_visit_mode">Privacy mode，can not see note content</string>
     <string name="notelist_string_info">…</string>
     <string name="notelist_menu_new">Add note</string>
-    <string name="delete_remind_time_message">Delete reminder successfully</string>
+    <string name="delete_remind_time_message">Reminder deleted successfully</string>
     <string name="set_remind_time_message">Set reminder</string>
     <string name="note_alert_expired">Expired</string>
     <string name="format_date_ymd">yyyyMMdd</string>
@@ -62,7 +62,7 @@
     <string name="menu_folder_view">View folder</string>
     <string name="menu_folder_delete">Delete folder</string>
     <string name="menu_folder_change_name">Change folder name</string>
-    <string name="folder_exist">The folder %1$s exist, please rename</string>
+    <string name="folder_exist">The folder %1$s exists, please rename</string>
     <string name="menu_share">Share</string>
     <string name="menu_send_to_desktop">Send to home</string>
     <string name="menu_alert">Remind me</string>
@@ -74,12 +74,12 @@
     <string name="alert_title_delete">Delete selected notes</string>
     <string name="alert_message_delete_notes">Confirm to delete the selected %d notes?</string>
     <string name="alert_message_delete_note">Confirm to delete this note?</string>
-    <string name="format_move_notes_to_folder">Have moved selected %1$d notes to %2$s folder</string>
+    <string name="format_move_notes_to_folder">Moved selected %1$d notes to %2$s folder</string>
     <!-- Error information -->
     <string name="error_sdcard_unmounted">SD card busy, not available now</string>
     <string name="error_sdcard_export">Export failed, please check SD card</string>
     <string name="error_note_not_exist">The note is not exist</string>
-    <string name="error_note_empty_for_clock">Sorry, can not set clock on empty note</string>
+    <string name="error_note_empty_for_clock">Sorry, clock cannot be set on empty note</string>
     <string name="error_note_empty_for_send_to_desktop">Sorry, can not send and empty note to home</string>
     <string name="success_sdcard_export">Export successful</string>
     <string name="failed_sdcard_export">Export fail</string>
@@ -95,11 +95,11 @@
     <string name="error_sync_cancelled">Sync is canceled</string>
     <string name="sync_progress_login">Logging into %1$s…</string>
     <string name="sync_progress_init_list">Getting remote note list…</string>
-    <string name="sync_progress_syncing">Synchronize local notes with Google Task…</string>
+    <string name="sync_progress_syncing">Synchronizing local notes with Google Tasks…</string>
     <!-- Preferences -->
     <string name="preferences_title">Settings</string>
     <string name="preferences_account_title">Sync account</string>
-    <string name="preferences_account_summary">Sync notes with google task</string>
+    <string name="preferences_account_summary">Sync notes with Google Tasks</string>
     <string name="preferences_last_sync_time">Last sync time %1$s</string>
     <string name="preferences_last_sync_time_format" translatable="false">yyyy-MM-dd hh:mm:ss</string>
     <string name="preferences_add_account">Add account</string>
@@ -109,12 +109,12 @@
     <string name="preferences_button_sync_immediately">Sync immediately</string>
     <string name="preferences_button_sync_cancel">Cancel syncing</string>
     <string name="preferences_dialog_change_account_title">Current account %1$s</string>
-    <string name="preferences_dialog_change_account_warn_msg">All sync related information will be deleted, which may result in duplicated items sometime</string>
+    <string name="preferences_dialog_change_account_warn_msg">All sync related information will be deleted, which may result in duplicated items</string>
     <string name="preferences_dialog_select_account_title">Sync notes</string>
-    <string name="preferences_dialog_select_account_tips">Please select a google account. Local notes will be synced with google task.</string>
+    <string name="preferences_dialog_select_account_tips">Please select a Google Account. Local notes will be synced with Google Tasks.</string>
     <string name="preferences_toast_cannot_change_account">Cannot change the account because sync is in progress</string>
     <string name="preferences_toast_success_set_accout">%1$s has been set as the sync account</string>
-    <string name="preferences_bg_random_appear_title">New note background color random</string>
+    <string name="preferences_bg_random_appear_title">Random background color for new notes</string>
 
     <string name="button_delete">Delete</string>
     <string name="call_record_folder_name">Call notes</string>
