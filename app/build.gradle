@@ -20,4 +20,5 @@ android {
         implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
         implementation 'com.google.android.material:material:1.8.0-alpha02'
     }
+    namespace 'net.micode.notes'
 }
